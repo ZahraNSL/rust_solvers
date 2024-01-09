@@ -1,0 +1,52 @@
+<Scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<Resources>
+  <Machines>
+   <Machine id="M1" Capacity="52792"/>
+    <Machine id="M2" Capacity="52792"/>
+    <!-- More machines -->
+  </Machines>
+  <MachineGroups>
+    <MachineGroup id="G1">
+      <Machine ref="M2"/>
+    </MachineGroup >
+    <MachineGroup id="G2"/>
+      <Machine ref="M1"/>
+    </MachineGroup >
+  </MachineGroups>
+</Resources>
+<Storages>
+  <Unit id="S1">
+    <Capacity>1000</Capacity>
+    <Type>Warehouse</Type>
+  </Unit>
+  <Unit id="S2">
+    <Capacity>500</Capacity>
+    <Type>Cooling</Type>
+  </Unit>
+  <!-- Additional storage units -->
+</Storages>
+<WorkOrders>
+  <Order id="WO1">
+    <Description>Manufacturing Widgets</Description>
+    <Duration>
+      <Start>2024-01-10</Start>
+      <End>2024-01-15</End>
+    </Duration>
+    <RequiredResources id="G1"/>
+    <StorageUnit id="S1"/>
+  </Order>
+  <Order id="WO2">
+    <Description>Packaging Goods</Description>
+    <Duration>
+      <Start>2024-01-16</Start>
+      <End>2024-01-20</End>
+    </Duration>
+    <RequiredResources id="G2"/>
+    <StorageUnit id="S2"/>
+  </Order>
+  <!-- Additional work orders -->
+</WorkOrders>
+
+
+</Scenario>

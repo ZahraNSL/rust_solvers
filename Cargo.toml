@@ -1,0 +1,15 @@
+[package]
+name = "rust_solvers"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.24"
+crossbeam = "0.8.2"
+iso8601-duration = "0.1.0"
+json = "0.12.4" 
+quick-xml = { version = "0.28.0", features = ["serialize"] }
+rand = "0.8.5"
+serde = { version = "1.0.156", features = ["derive"] }
